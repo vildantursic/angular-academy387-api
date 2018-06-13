@@ -24,9 +24,13 @@ app.use(json2xls.middleware);
  * ROUTES
  */
 const project = require('./routes/project/index');
+const complex = require('./routes/complex/index');
+const entity = require('./routes/entity/index');
 const bimModel = require('./routes/bim-model/index');
 
 app.use('/api/v1/', project);
+app.use('/api/v1/', complex);
+app.use('/api/v1/', entity);
 app.use('/api/v1/', bimModel);
 
 app.listen(3870, () => console.log('W-API listening on port 3870!'));
