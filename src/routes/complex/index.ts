@@ -41,7 +41,7 @@ router.put('/complexes/:id', async (req: Request, res: Response) => {
       res.json(err);
     } else {
       console.log(data);
-      if (data.nModified === 1) {
+      if (data) {
         res.status(200).json({ message: 'successfully edited' });
       } else {
         res.status(400).json({ message: 'Something went wrong' });
